@@ -1,0 +1,40 @@
+.slick-list {
+    overflow: hidden;
+}
+.slick-track{
+    display: flex;
+}
+.slick-arrows{
+    position: relative;
+    max-width: 1170px;
+    margin: 0 auto;
+    z-index: 1000;
+}
+.prev{
+    background: url(../image/slider-block/left-arrow.png);
+    width: 35px;
+    left: 0;
+    height: 60px;
+}
+.next{
+    background: url(../image/slider-block/right-arrow.png);
+    width: 35px;
+    right: 0;
+    height: 60px;
+}
+.slick-arrow{
+    position: absolute;
+    top: -200px;
+    font-size: 0;
+    z-index: 1000;
+    margin-top: -30px;
+}
+
+@media screen and (max-width: 1170px) {
+    .prev {
+        left: 30px;
+    }
+    .next{
+        right: 30px;
+    }
+  }
