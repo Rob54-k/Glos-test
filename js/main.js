@@ -1,4 +1,5 @@
 $(document).ready(function(){
+      
   let notes = items.slice(0, 5);
   getItem(notes);
     $('.menu-main-item > span').on('click',function() {
@@ -17,15 +18,15 @@ $(document).ready(function(){
     // Работа с модальным окном
     $("#tel").mask("8(999) 999-9999");
     $('.call-back').on('click',function(e){
-      $('.modal__body').offset({top:e.target.offsetTop + 170});
+      $('body').css("overflow","hidden");
       $('.modal').fadeIn(500).show(400);
     });
-    $('.button-callback').on('click',function(e){
-      $('.modal__body').offset({top:e.target.offsetTop - 350});
+    $('.button-callback').on('click',function(){
+      $('body').css("overflow","hidden");
       $('.modal').fadeIn(500).show();
     });
     $('.close-modal').on('click',function(){
-      $('.modal__body').offset({top: 0});
+      $('body').css("overflow","auto");
       $('.modal').fadeOut().hide();
     });
 
