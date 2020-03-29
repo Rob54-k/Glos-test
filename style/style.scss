@@ -461,6 +461,9 @@ body{
         align-items: center;
         margin-bottom: 20px;
         input{
+            font-size: 14px;
+            font-family: $font;
+            color: $darkGrey;
             padding-left: 10px;
             width: 339px;
             height: 40px;
@@ -510,6 +513,9 @@ body{
             font-weight: 400;    
         }
         textarea{
+            font-size: 14px;
+            font-family: $font;
+            color: $darkGrey;
             padding-left: 10px;
             padding-top: 10px;
             width: 339px;

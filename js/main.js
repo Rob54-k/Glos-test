@@ -28,6 +28,7 @@ $(document).ready(function(){
     $('.close-modal').on('click',function(){
       $('body').css("overflow","auto");
       $('.modal').fadeOut().hide();
+      clearModal();
     });
 
     //Проверка на пустые поля
@@ -44,13 +45,23 @@ $(document).ready(function(){
        }
       });
       if($( ".ready" ).length == 3){
-        $('.input_item').val('');
-        $('.textarea_item').val('');
-        alert('Форма отправлена')
+        let formValue = {
+          name: $('#input-name').val(),
+          email: $('#input-mail').val(),
+          phone: $('#tel').val()
+        };
+        alert(`Форма со значениями \n ${formValue.name} \n ${formValue.phone} \n ${formValue.email} \n отправлена`);
+        clearModal();
        }
-      
     });
-    
+    function clearModal(){
+      $('.input_item').val('');
+      $('.textarea_item').val('');
+      $('.input_item').each(function(){
+        $(this).parent().find('span').hide();
+        $(this).removeClass('empty');
+      })
+    };
 }); 
 
 var items =[

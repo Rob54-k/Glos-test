@@ -628,6 +628,9 @@ body {
 }
 
 .modal__input input {
+  font-size: 14px;
+  font-family: "PT Sans";
+  color: #474747;
   padding-left: 10px;
   width: 339px;
   height: 40px;
@@ -697,6 +700,9 @@ body {
 }
 
 .modal__area textarea {
+  font-size: 14px;
+  font-family: "PT Sans";
+  color: #474747;
   padding-left: 10px;
   padding-top: 10px;
   width: 339px;
